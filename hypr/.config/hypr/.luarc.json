@@ -1,0 +1,5 @@
+{
+  "_comment": "JSON ini untuk menghilangkan Undefined global 'hl'",
+  "workspace": { "library": ["/usr/share/hypr/stubs"] },
+  "diagnostics": { "globals": ["h1"] }
+}

@@ -1,0 +1,78 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin": "6 10 0 10",
+  "modules-left": ["hyprland/workspaces", "mpd"],
+
+  "modules-center": ["clock"],
+
+  "modules-right": 
+  [ "cpu", 
+    "memory", 
+    "pulseaudio", 
+    "backlight", 
+    "network", 
+    "battery",
+    "custom/devices",
+    "tray",
+    "custom/exit"
+     ],
+
+
+  "custom/devices": {
+    "exec": "~/.config/waybar/scripts/devices.sh",
+    "return-type": "json",
+    "interval": 3,
+    "on-click": "dolphin /run/media/$USER",
+    "on-click-right": "udiskie-umount --all"
+  },
+
+  "custom/exit": {
+      "format": "󰐥",
+      "tooltip-format": "Powermenu",
+      "on-click": "wlogout -b 4",
+      "tooltip": false
+    },
+
+  "hyprland/workspaces": { 
+    "format": "{id}", 
+    "on-click": "activate" },
+
+ "mpd": {
+  "format": "󰎆 {title}",
+  "format-paused": "󰏤 {title}",
+  "format-stopped": "󰓛 stopped",
+  "format-disconnected": "󰎊 mpd off",
+  "max-length": 30,
+  "tooltip-format": "{artist} - {title}\n{album}",
+  "on-click": "kitty --class rmpc-popup -e rmpc"
+  },
+
+  "clock": { 
+    "format": "{:%H:%M}", 
+    "tooltip-format": "{:%A, %d %B %Y}" },
+  
+  "cpu": { 
+    "format": "󰻠 {usage}%" },
+  
+  "memory": { 
+    "format": "󰍛 {percentage}%" },
+  
+  "pulseaudio": { 
+    "format": "󰕾 {volume}%", 
+    "format-muted": "󰝟 muted", 
+    "on-click": "pavucontrol" },
+
+  "backlight": { 
+    "format": "󰃟 {percent}%" },
+  
+  "network": { 
+    "format-wifi": "󰖩 {essid}", 
+    "format-disconnected": "󰖪 off", 
+    "on-click": "kitty nmtui" },
+
+  "battery": { 
+    "format": "󰁹 {capacity}%", 
+    "format-charging": "󰂄 {capacity}%" }
+}

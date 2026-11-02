@@ -1,0 +1,16 @@
+[directory]
+style = "cyan"        # dotfiles/dwm is teal
+truncation_length = 2
+
+[git_branch]
+style = "purple"      # "main" is pink/mauve
+
+[git_status]
+style = "red"         # the [!] is pink-red
+
+[c]
+style = "green"       # the version text is green-yellow
+
+[character]
+success_symbol = "[ ❯](blue)"
+error_symbol = "[ ❯](red)"

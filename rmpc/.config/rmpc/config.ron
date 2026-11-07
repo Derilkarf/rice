@@ -4,7 +4,7 @@
 (
     address: "127.0.0.1:6600",
     lyrics_dir: "~/Music",
-   theme: "~/.config/rmpc/themes/catpuccin.ron",
+   theme: "~/.config/rmpc/themes/deril.ron",
     browser_song_sort: [Disc, Track, Artist, Title],
     directories_sort: SortFormat(group_by_type: true, reverse: false),
 

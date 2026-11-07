@@ -29,7 +29,7 @@
   },
 
   "custom/exit": {
-      "format": "󰐥",
+      "format": " ",
       "tooltip-format": "Powermenu",
       "on-click": "wlogout -b 4",
       "tooltip": false

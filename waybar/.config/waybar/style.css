@@ -1,37 +1,65 @@
 @import url("/home/derilkarf/.cache/wal/colors-waybar.css");
 
-* { font-family: "JetBrainsMono Nerd Font"; 
+* { 
+    font-family: "JetBrainsMono Nerd Font"; 
     font-size: 13px; 
     border: none; 
-    min-height: 0; }
+    min-height: 0; 
+}
 
 window#waybar { 
-
-background: rgba(10, 15, 30, 0.6); 
-border-radius: 12px; 
-color: #c8d6ff; }
+    background: alpha(@background, 0.6); 
+    border-radius: 12px; 
+    color: @foreground; 
+}
 
 #workspaces button { 
-
-padding: 0 8px; 
-color: #6f86c8; 
-background: transparent; }
+    padding: 0 8px; 
+    color: @color8; 
+    background: transparent; 
+}
 
 #workspaces button.active { 
-
-color: #ffffff; 
-background: rgba(80, 120, 255, 0.35); 
-border-radius: 8px; }
+    color: @background; 
+    background: alpha(@color2, 0.5); 
+    border-radius: 8px; 
+}
 
 #custom-devices.idle {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 #custom-devices.active {
-  border-bottom: 2px solid currentColor;
+    border-bottom: 2px solid @color3;
 }
 
 #cpu, #memory, #pulseaudio, #backlight, #network, #battery, #clock, #mpd, #custom-exit, #custom-devices { 
-  padding: 0 10px; 
-  font-size: 16px;
+    padding: 0 10px; 
+    font-size: 16px;
 } 
+
+/* ==========================================================
+   BAGIAN BATERAI: Peringatan & Animasi
+   ========================================================== */
+
+#battery.warning {
+    /* Menggunakan warna kuning/aksen Pywal untuk baterai < 30% */
+    color: @color3; 
+}
+
+#battery.critical {
+    /* Menggunakan warna merah Pywal untuk baterai < 15% */
+    color: @color1; 
+    animation-name: blink;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Animasi kedap-kedip dari merah ke warna teks standar (foreground) */
+@keyframes blink {
+    to {
+        color: @foreground;
+    }
+}

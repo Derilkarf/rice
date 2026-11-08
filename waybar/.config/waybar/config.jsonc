@@ -3,6 +3,7 @@
   "position": "top",
   "height": 32,
   "margin": "6 10 0 10",
+
   "modules-left": ["hyprland/workspaces", "mpd"],
 
   "modules-center": ["clock"],
@@ -37,7 +38,8 @@
 
   "hyprland/workspaces": { 
     "format": "{id}", 
-    "on-click": "activate" },
+    "on-click": "activate" 
+  },
 
  "mpd": {
   "format": "󰎆 {title}",
@@ -51,28 +53,46 @@
 
   "clock": { 
     "format": "{:%H:%M}", 
-    "tooltip-format": "{:%A, %d %B %Y}" },
+    "tooltip-format": "{:%A, %d %B %Y}" 
+  },
   
   "cpu": { 
-    "format": "󰻠 {usage}%" },
+    "format": "󰻠 {usage}%" 
+  },
   
   "memory": { 
-    "format": "󰍛 {percentage}%" },
+    "format": "󰍛 {percentage}%" 
+  },
   
   "pulseaudio": { 
     "format": "󰕾 {volume}%", 
     "format-muted": "󰝟 muted", 
-    "on-click": "pavucontrol" },
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    // Scroll Pake Mouse Untuk Alternatif nurunin / nambahin volume
+    "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+",
+    "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%-"
+  },
 
   "backlight": { 
-    "format": "󰃟 {percent}%" },
+    "format": "󰃟 {percent}%" 
+  },
   
   "network": { 
     "format-wifi": "󰖩 {essid}", 
     "format-disconnected": "󰖪 off", 
-    "on-click": "kitty nmtui" },
+    "on-click": "kitty nmtui" 
+  },
 
   "battery": { 
     "format": "󰁹 {capacity}%", 
-    "format-charging": "󰂄 {capacity}%" }
+    "format-charging": "󰂄 {capacity}%",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  }
 }

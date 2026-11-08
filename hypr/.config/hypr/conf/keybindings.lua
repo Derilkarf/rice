@@ -25,6 +25,12 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+-- Mindahin Tabs Dari Keyboard
+hl.bind(mainMod .. " + ALT + left",   hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + ALT + right",  hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + ALT + up",     hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + ALT + down",   hl.dsp.window.move({ direction = "down" }))
+
 -- Workspace
 for i = 1, 10 do
     local key = i % 10
@@ -53,6 +59,7 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+
 
 -- Screenshot
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))

@@ -12,6 +12,7 @@ hl.config({
 
         touchpad = {
             natural_scroll = false,
+            tap_to_click = true, ---- Mengaktifkan fitur tap pada touchpad buat pengganti misal mouseku ilang
         },
     },
 })
@@ -26,3 +27,6 @@ hl.device({
     name        = "epic-mouse-v1",
     sensitivity = -0.5,
 })
+
+-- Hardware Binds 
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("systemctl suspend"), { locked = true}) -- ini agar laptop otomatis masuk ke mode sleep pas layarnya ditutup

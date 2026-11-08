@@ -1,0 +1,37 @@
+@import url("/home/derilkarf/.cache/wal/colors-waybar.css");
+
+* { font-family: "JetBrainsMono Nerd Font"; 
+    font-size: 13px; 
+    border: none; 
+    min-height: 0; }
+
+window#waybar { 
+
+background: rgba(10, 15, 30, 0.6); 
+border-radius: 12px; 
+color: #c8d6ff; }
+
+#workspaces button { 
+
+padding: 0 8px; 
+color: #6f86c8; 
+background: transparent; }
+
+#workspaces button.active { 
+
+color: #ffffff; 
+background: rgba(80, 120, 255, 0.35); 
+border-radius: 8px; }
+
+#custom-devices.idle {
+  opacity: 0.5;
+}
+
+#custom-devices.active {
+  border-bottom: 2px solid currentColor;
+}
+
+#cpu, #memory, #pulseaudio, #backlight, #network, #battery, #clock, #mpd, #custom-exit, #custom-devices { 
+  padding: 0 10px; 
+  font-size: 16px;
+} 

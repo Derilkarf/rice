@@ -52,3 +52,27 @@ hl.window_rule({
   size = "600 350",
   move = "10 50",
 })
+
+-- memastikan pop-up password admin (KDE Polkit) gk nyempil di layout tiling
+hl.window_rule({
+  name = "polkit-kde-float",
+  match = { class = "polkit-kde-authentication-agent-1"},
+  float = true,
+  center = true,
+})
+
+-- Nyegah menu dropdown / sub menu Steam merusak layout tilling
+hl.window_rule({
+  name = "steam-menus",
+  match = { class = "steam", title = "^$"},
+  float = true,
+  no_focus = true,
+})
+
+-- bikin menu Friendlist di Steam ngambang
+hl.window_rule({
+  name = "steam-friends",
+  match = { class = "steam", title = "Friend List"},
+  float = true,
+  size = "400 600",
+})

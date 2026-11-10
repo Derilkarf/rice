@@ -1,0 +1,47 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+
+  // Logo: kitty-icat draws an image, so no "color" block is needed
+  "logo": {
+    "type": "kitty-icat",
+    "source": "/home/derilkarf/Pictures/Profile_Picture/pp7.jpg",
+    "width": 24,
+    "height": 12,
+    "padding": { "top": 2, "left": 3, "right": 4 }
+  },
+
+ "display": {
+    "separator": " 󰁔  "
+  },
+  "modules": [
+    "break",
+
+    // ───── Hardware (Blue) ─────
+    { "type": "custom",   "format": "{#90}╭───── {#34}  Hardware {#90}─────╮{#}" },
+    { "type": "host",     "key": "{#90}│ {#34}󰌢 Host    ", "format": "Axioo Hype 5 AMD X5-2" },
+    { "type": "cpu",      "key": "{#90}│ {#34}󰠰 CPU     ", "format": "{1}" },
+    { "type": "gpu",      "key": "{#90}│ {#34}󰢮 GPU     ", "format": "{2}" },
+    { "type": "memory",   "key": "{#90}│ {#34}󰍛 RAM     ", "format": "{1} / {2}" },
+    { "type": "disk",     "key": "{#90}│ {#34}󰋊 Disk    ", "format": "{1} / {2} ({9})" },
+    { "type": "battery",  "key": "{#90}│ {#34}󰁹 Battery "},
+
+    // ───── System (Magenta) ─────
+    { "type": "custom",   "format": "{#90}├───── {#35}󰣇  System   {#90}─────┤{#}" },
+    { "type": "os",       "key": "{#90}│ {#35}󰣇 OS      " },
+    { "type": "kernel",   "key": "{#90}│ {#35}󰌽 Kernel  " },
+    { "type": "packages", "key": "{#90}│ {#35}󰏖 Pkgs    " },
+    { "type": "de",       "key": "{#90}│ {#35}󰧨 DE      " },
+    { "type": "wm",       "key": "{#90}│ {#35} WM      " },
+    { "type": "uptime",   "key": "{#90}│ {#35}󰅐 Uptime  " },
+
+    // ───── Workspace (Green) ─────
+    { "type": "custom",   "format": "{#90}├───── {#32}  Workspace {#90}─────┤{#}" },
+    { "type": "users",    "key": "{#90}│ {#32} User    ", "format": "derilkarf" },
+    { "type": "shell",    "key": "{#90}│ {#32}󰞷 Shell   " },
+    { "type": "terminal", "key": "{#90}│ {#32} Term    " },
+    { "type": "custom",   "key": "{#90}│ {#32} Editor  ", "format": "Neovim (NvChad)" },
+    { "type": "custom",   "format": "{#90}╰────────────────────────╯{#}" },
+
+    "break",
+    { "type": "colors", "symbol": "circle", "paddingLeft": 2 }
+  ]}

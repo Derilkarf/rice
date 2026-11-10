@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Pakai: ytm URL    -> satu lagu
+#        ytm -p URL -> seluruh playlist
+MUSIC="$HOME/Music/"
+mode="--no-playlist"
+[ "$1" = "-p" ] && { mode="--yes-playlist"; shift; }
+
+yt-dlp $mode -x --audio-format mp3 --audio-quality 0 \
+  --embed-metadata --embed-thumbnail --convert-thumbnails jpg \
+  --ppa "ThumbnailsConvertor+FFmpeg_o:-vf crop=ih:ih" \
+  -o "$MUSIC/%(title)s.%(ext)s" "$1"
+
+mpc update

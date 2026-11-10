@@ -31,6 +31,12 @@ hl.bind(mainMod .. " + ALT + right",  hl.dsp.window.move({ direction = "right" }
 hl.bind(mainMod .. " + ALT + up",     hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + ALT + down",   hl.dsp.window.move({ direction = "down" }))
 
+-- Resize Window Via Keyboard
+hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.resize({ x = -30, y = 0, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.resize({ x = 30, y = 0, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + CTRL + up",    hl.dsp.window.resize({ x = 0, y = -30, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + CTRL + down",  hl.dsp.window.resize({ x = 0, y = 30, relative = true}), { repeating = true })
+
 -- Workspace
 for i = 1, 10 do
     local key = i % 10

@@ -1,37 +1,41 @@
-# hyprland-rice
+# dotfiles
 
 My Hyprland rice on CachyOS, kept here as a backup and so I can reinstall it fast.
 
-| Desktop
+| Desktop | |
 |---|---|
-| ![](assets/desktop.png) | ![](assets/desktop1.png) | 
+| ![](assets/desktop.png) | ![](assets/logout.png) |
 
-<!-- Video: drag an .mp4 (under 10 MB) into the GitHub README editor and it gives you a link. Paste it here. -->
+| Showcase | |
+|---|---|
+| ![](assets/showase.mp4) |
 
 ## Screenshots
 
 | Terminal | Rofi launcher | Fastfetch
-|---|---|
-| ![](assets/terminal.png) | ![](assets/rofi.png) | ![](assets/fastfetch) |
+|---|---|---|
+| ![](assets/terminal.png) | ![](assets/rofi.png) | ![](assets/fastfetch.png) |
 
 ## What's inside
 
 | Folder | Program |
 |---|---|
+| `fastfetch` | System Information |
 | `hypr` | Hyprland (window manager) |
-| `waybar` | Status bar |
-| `rofi` | App launcher |
 | `kitty` | Terminal |
 | `mako` | Notifications |
 | `rmpc` | Music player (MPD client) |
+| `rofi` | App launcher |
+| `scripts` | Custom Command |
 | `starship` | Shell prompt |
+| `waybar` | Status bar |
 | `wlogout` | Logout menu |
 
 ## Install
 
 ```bash
 git clone https://github.com/Derilkarf/hyprland-rice.git ~/hyprland-rice
-cd ~/hyprland-rice
+cd ~/dotfiles
 sudo pacman -S stow hyprland waybar rofi kitty mako starship wlogout mpd rmpc
 stow hypr waybar rofi kitty mako rmpc starship wlogout
 ```

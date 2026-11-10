@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 
 My Hyprland rice on CachyOS, kept here as a backup and so I can reinstall it fast.
 
@@ -8,7 +8,8 @@ My Hyprland rice on CachyOS, kept here as a backup and so I can reinstall it fas
 
 | Showcase | |
 |---|---|
-| ![](assets/showase.mp4) |
+| ![]https://github.com/user-attachments/assets/c3c4a974-0e1a-4d1a-84a7-0f7a01dd392a
+ |
 
 ## Screenshots
 
